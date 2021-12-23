@@ -1,6 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("./app/styles/variables.css");
+@import url("./app/styles/class.css");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Alegreya Sans", sans-serif;
 }

@@ -1,0 +1,20 @@
+:root {
+  /*colors*/
+  --black: #040303;
+  --white: #fff;
+  /*font-size*/
+  --bigFont: 2.4rem;
+  --mediunFont: 1.8rem;
+  --paraghraFont: 1.6rem;
+  --littleFont: 1.4rem;
+  /*line-height*/
+  --bigFontHeight: 28.8rem;
+  --mediunFontHeight: 21.6rem;
+  --paraghraFonHeight: 19.2rem;
+  --littleFontHeight: 16.8rem;
+  /*font-weight*/
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+}
