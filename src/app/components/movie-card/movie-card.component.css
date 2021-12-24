@@ -1,0 +1,19 @@
+.movie-card {
+  width: 340px;
+  height: 190px;
+}
+.movie-card-image {
+  width: 135px;
+  height: 175px;
+}
+.movie-card-detail {
+  color: var(--black);
+}
+h2 {
+  font-size: var(--mediunFont);
+  font-weight: var(--bold);
+}
+p {
+  font-size: var(--paraghraFont);
+  font-weight: var(--regular);
+}
