@@ -4,4 +4,5 @@
   font-size: var(--mediunFont);
   font-weight: var(--bold);
   background-color: var(--black);
+  border-bottom: 1px solid var(--white);
 }
