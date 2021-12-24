@@ -1,17 +1,14 @@
 <section class="nasa-card">
   <figure class="nasa-card-image">
-    <img
-      src="https://apod.nasa.gov/apod/image/2112/20211221Tezel1024c.jpg"
-      alt="title"
-    />
+    <img [src]="nasaApodInfo.hdurl" [alt]="nasaApodInfo.title" />
   </figure>
 
   <article class="nasa-card-image-detail flex-column glass padding">
     <h2>Picture of the Day:</h2>
-    <p>Thursday: 25/08/2021</p>
-    <p>Title: Thre in sky</p>
-    <p>Autor: TEsla nicolas</p>
-    <a href="#" class="flex-center">
+    <p>{{ nasaApodInfo.date }}</p>
+    <p>{{ nasaApodInfo.title }}</p>
+    <p>{{ nasaApodInfo.copyright }}</p>
+    <a [href]="nasaApodInfo.url" target="blank" class="flex-center">
       <span class="fas fa-cloud-download-alt"></span>
     </a>
   </article>
