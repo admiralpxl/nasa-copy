@@ -1,0 +1,40 @@
+h2 {
+  font-size: var(--mediunFont);
+  font-weight: var(--medium);
+}
+p {
+  font-size: var(--littleFont);
+  font-weight: var(--light);
+}
+a {
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+}
+.nasa-card {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-top: 1px solid var(--white);
+}
+.nasa-card-image {
+  width: 100%;
+  max-width: 600px;
+  min-height: 320px;
+  margin: auto;
+}
+.nasa-card-image-detail {
+  width: 80%;
+  gap: 0.4rem;
+  max-width: 380px;
+  height: auto;
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+}
