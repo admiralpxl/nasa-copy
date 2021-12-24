@@ -1,0 +1,44 @@
+@import url("./variables.css");
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.8s ease;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--blue);
+}
+button,
+input {
+  outline: none;
+  border: none;
+}
+.padding {
+  padding: 0.8rem;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+.flex-gap-one {
+  display: flex;
+  gap: 0.8rem;
+}

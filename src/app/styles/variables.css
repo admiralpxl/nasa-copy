@@ -1,7 +1,8 @@
 :root {
   /*colors*/
-  --black: #040303;
-  --white: #fff;
+  --black: #1f1f1f;
+  --white: #f9f9f9;
+  --blue: #4298b3;
   /*font-size*/
   --bigFont: 2.4rem;
   --mediunFont: 1.8rem;

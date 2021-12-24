@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("./app/styles/variables.css");
-@import url("./app/styles/class.css");
+@import url("./app/styles/globalClass.css");
 
 * {
   margin: 0;
