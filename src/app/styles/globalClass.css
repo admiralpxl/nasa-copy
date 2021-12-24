@@ -21,8 +21,26 @@ input {
   outline: none;
   border: none;
 }
+::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--blueOpacity); /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blackOpacity); /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 1px solid var(--whiteOpacity); /* creates padding around scroll thumb */
+}
 .padding {
   padding: 0.8rem;
+}
+.center {
+  justify-content: center;
+  align-items: center;
 }
 .flex-between {
   display: flex;
@@ -60,7 +78,6 @@ input {
 }
 .glass-two {
   background: rgba(249, 249, 249, 0.45);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;

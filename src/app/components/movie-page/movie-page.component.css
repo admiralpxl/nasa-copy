@@ -1,0 +1,13 @@
+.movie-page {
+  padding: 1.1rem;
+  border-radius: 5px;
+  background-color: var(--white);
+  transition: all 0.8s ease;
+  color: var(--black);
+  font-size: var(--littleFont);
+  font-weight: var(--medium);
+}
+.movie-page:hover {
+  background-color: var(--blue);
+  transform: scale(0.5);
+}

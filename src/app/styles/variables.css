@@ -3,6 +3,9 @@
   --black: #1f1f1f;
   --white: #f9f9f9;
   --blue: #4298b3;
+  --blackOpacity: #1f1f1fb6;
+  --whiteOpacity: #f9f9f9b6;
+  --blueOpacity: #4299b3b2;
   /*font-size*/
   --bigFont: 2.4rem;
   --mediunFont: 1.8rem;

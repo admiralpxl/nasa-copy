@@ -12,6 +12,7 @@ import { NasaSearchComponent } from './components/nasa-search/nasa-search.compon
 import { NasaCardComponent } from './components/nasa-card/nasa-card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NasaComponent } from './pages/nasa/nasa.component';
+import { MoviePageComponent } from './components/movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NasaComponent } from './pages/nasa/nasa.component';
     NasaSearchComponent,
     NasaCardComponent,
     HomeComponent,
-    NasaComponent
+    NasaComponent,
+    MoviePageComponent
   ],
   imports: [
     BrowserModule,
