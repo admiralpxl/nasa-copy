@@ -21,7 +21,6 @@ a {
   width: 100%;
   height: auto;
   position: relative;
-  border-top: 1px solid var(--white);
 }
 .nasa-card-image {
   width: 100%;

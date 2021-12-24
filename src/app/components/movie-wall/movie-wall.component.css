@@ -1,6 +1,7 @@
 .movie-wall {
   width: 100%;
   height: 320px;
+  position: relative;
 }
 .movie-wall h2 {
   font-size: var(--mediunFont);
