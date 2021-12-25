@@ -50,6 +50,7 @@
   border-radius: 5px;
 }
 .movie-detail-description {
+  overflow-y: scroll;
   font-size: var(--paraghraFont);
   font-weight: var(--regular);
   line-height: var(--paraghraFonHeight);

@@ -1,5 +1,7 @@
 # LumiqualisTest
 
+This my solution to the tecnichall challenge for frontend developer at Lumiqualist [See the deploy here](https://nasa-copy.vercel.app/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
