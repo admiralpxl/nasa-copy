@@ -24,6 +24,7 @@
 }
 .movie-detail-back:hover {
   background-color: var(--blue);
+  color: var(--white);
   cursor: pointer;
 }
 .movie-detail-title {

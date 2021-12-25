@@ -2,6 +2,7 @@
   <h2>Nasa Movies</h2>
   <section class="movie-wall-list flex-gap-one">
     <app-movie-card
+      (send)="idMovieDetail($event)"
       [list]="list"
       *ngFor="let list of listMovie"
     ></app-movie-card>
@@ -11,4 +12,9 @@
   </article>
 </section>
 
-<app-movie-detail *ngIf="showSide === true"></app-movie-detail>
+<app-movie-detail
+  (change)="closeWindow($event)"
+  [showInfo]="showSide"
+  [idMovie]="idMovie"
+  *ngIf="showSide === true"
+></app-movie-detail>

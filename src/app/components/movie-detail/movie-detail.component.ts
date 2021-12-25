@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { MovieInfoDetails } from 'src/app/models/movie.model';
+import { ApisService } from 'src/app/services/apis.service';
 
 @Component({
   selector: 'app-movie-detail',
@@ -19,7 +20,28 @@ export class MovieDetailComponent implements OnInit {
     poster_path: '',
     vote_average: '',
   };
-  constructor() {}
+  imageUrl: string = '';
+  @Input() showInfo: boolean = false;
+  @Input() idMovie: string = '';
+  @Output() change = new EventEmitter<boolean>();
 
-  ngOnInit(): void {}
+  constructor(private apisServices: ApisService) {
+    this.imageUrl = this.apisServices.getMovieNasaDetailImage();
+  }
+
+  ngOnInit(): void {
+    this.getDetailMovie(this.idMovie);
+  }
+
+  toggleButton() {
+    this.showInfo = false;
+    this.change.emit();
+    console.log(this.showInfo);
+  }
+
+  async getDetailMovie(id: string) {
+    let response = await fetch(this.apisServices.getMovieDetail(id));
+    this.movieDetail = await response.json();
+    console.log(this.movieDetail);
+  }
 }

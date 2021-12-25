@@ -1,4 +1,4 @@
-<article class="movie-card padding flex-gap-one glass-two">
+<article (click)="getId()" class="movie-card padding flex-gap-one glass-two">
   <figure class="movie-card-image">
     <img [src]="urlImage + list.poster_path" [alt]="list.title" />
   </figure>

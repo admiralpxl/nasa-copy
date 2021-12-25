@@ -1,6 +1,6 @@
 <section class="movie-detail padding flex-column glass-two">
-  <button class="movie-detail-back">
-    <span class="fas fa-arrow-left"></span>
+  <button (click)="toggleButton()" class="movie-detail-back">
+    <span class="fas fa-times"></span>
   </button>
   <h2 class="movie-detail-title">{{ movieDetail.title }}</h2>
   <article class="movie-detail-info__movie flex-gap-one">
@@ -26,13 +26,13 @@
     <article class="movie-detail-description__more-grid">
       <span class="fas fa-link"></span>
       <h4>Links</h4>
-      <a [href]="movieDetail.homepage">Page</a>
+      <a target="blank" [href]="movieDetail.homepage">Page</a>
     </article>
 
     <article class="movie-detail-description__more-grid">
       <span class="fas fa-image"></span>
       <h4>Poster</h4>
-      <a [href]="movieDetail.poster_path">Download</a>
+      <a target="blank" [href]="imageUrl + movieDetail.poster_path">Download</a>
     </article>
 
     <article class="movie-detail-description__more-grid">

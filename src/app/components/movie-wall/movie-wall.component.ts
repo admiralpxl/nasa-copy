@@ -13,7 +13,8 @@ export class MovieWallComponent implements OnInit {
   detailListMovieUrl: string = '';
   imageMovieUrl: string = '';
   pageMovieList: string = '1';
-  showSide: boolean = true;
+  showSide: boolean = false;
+  idMovie: string = '';
   listMovie: MovieDetails[] = [
     {
       id: '',
@@ -35,17 +36,23 @@ export class MovieWallComponent implements OnInit {
     this.getNasaMovieList();
   }
 
+  idMovieDetail(id: string) {
+    console.log(id + ' log padre');
+    this.idMovie = id;
+    this.showSide = !this.showSide;
+  }
+  closeWindow(change: boolean) {
+    this.showSide = change;
+  }
+
   async getNasaMovieList() {
     let response = await fetch(this.listUrlMovies);
     let data = await response.json();
-    let responseId = await fetch(this.apisService.getMovieDetail('369467'));
-    let dataID = await responseId.json();
     console.log(data);
     console.log(data.results);
     console.log(data.total_pages);
     this.listMovie = data.results.filter(
       (item: { poster_path: null }) => item.poster_path !== null
     );
-    console.log(dataID);
   }
 }
