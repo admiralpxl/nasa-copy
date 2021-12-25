@@ -9,6 +9,8 @@
   border-top-right-radius: 0px;
   gap: 12px;
   right: 0;
+  top: 0;
+  position: fixed;
 }
 .movie-detail-back {
   width: 40px;

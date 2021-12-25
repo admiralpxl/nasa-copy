@@ -12,6 +12,8 @@ export class MovieWallComponent implements OnInit {
   listUrlMovies: string = '';
   detailListMovieUrl: string = '';
   imageMovieUrl: string = '';
+  pageMovieList: string = '1';
+  showSide: boolean = true;
   listMovie: MovieDetails[] = [
     {
       id: '',
@@ -22,21 +24,28 @@ export class MovieWallComponent implements OnInit {
   ];
 
   constructor(private apisService: ApisService) {
-    this.listUrlMovies = this.apisService.getMovieNasaList();
+    this.listUrlMovies = this.apisService.getMovieNasaList(this.pageMovieList);
   }
 
   ngOnInit(): void {
-    this.getNaseMovieList();
+    this.getNasaMovieList();
+  }
+  ngOnChanges(): void {
+    this.pageMovieList = '2';
+    this.getNasaMovieList();
   }
 
-  async getNaseMovieList() {
+  async getNasaMovieList() {
     let response = await fetch(this.listUrlMovies);
     let data = await response.json();
+    let responseId = await fetch(this.apisService.getMovieDetail('369467'));
+    let dataID = await responseId.json();
     console.log(data);
     console.log(data.results);
+    console.log(data.total_pages);
     this.listMovie = data.results.filter(
       (item: { poster_path: null }) => item.poster_path !== null
     );
-    console.log(this.listMovie);
+    console.log(dataID);
   }
 }

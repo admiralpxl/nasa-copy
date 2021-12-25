@@ -9,12 +9,12 @@ export class ApisService {
   private urlImage: string = 'https://image.tmdb.org/t/p/original/';
   private nasaApodApi: string = `https://api.nasa.gov/planetary/apod?api_key=${this.nasaApiKey}`;
   private theMovieIdApiBase: string = 'https://api.themoviedb.org/3';
-  private movieNasaInfoApi: string = `https://api.themoviedb.org/3/search/movie?api_key=${this.movieKey}&language=en-US&query=NASA&page=1&include_adult=false`;
+  private movieNasaInfoApi: string = `https://api.themoviedb.org/3/search/movie?api_key=${this.movieKey}&language=en-US&query=NASA&page=`;
 
   constructor() {}
 
-  getMovieNasaList() {
-    return this.movieNasaInfoApi;
+  getMovieNasaList(page: string) {
+    return `${this.movieNasaInfoApi}${page}&include_adult=false`;
   }
   getMovieDetail(id: string) {
     return `${this.theMovieIdApiBase}/movie/${id}?api_key=${this.movieKey}`;
