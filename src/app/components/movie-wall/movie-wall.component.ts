@@ -31,13 +31,9 @@ export class MovieWallComponent implements OnInit {
   ngOnInit(): void {
     this.getNasaMovieList();
   }
-  ngOnChanges(): void {
-    this.pageMovieList = '2';
-    this.getNasaMovieList();
-  }
+  ngOnChanges(): void {}
 
   idMovieDetail(id: string) {
-    console.log(id + ' log padre');
     this.idMovie = id;
     this.showSide = !this.showSide;
   }
@@ -48,9 +44,6 @@ export class MovieWallComponent implements OnInit {
   async getNasaMovieList() {
     let response = await fetch(this.listUrlMovies);
     let data = await response.json();
-    console.log(data);
-    console.log(data.results);
-    console.log(data.total_pages);
     this.listMovie = data.results.filter(
       (item: { poster_path: null }) => item.poster_path !== null
     );

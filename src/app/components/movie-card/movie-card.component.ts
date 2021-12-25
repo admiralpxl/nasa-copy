@@ -23,7 +23,6 @@ export class MovieCardComponent implements OnInit {
   }
 
   getId() {
-    console.log(this.list.id + ' log hijo');
     this.send.emit(this.list.id);
   }
 

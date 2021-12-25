@@ -36,12 +36,10 @@ export class MovieDetailComponent implements OnInit {
   toggleButton() {
     this.showInfo = false;
     this.change.emit();
-    console.log(this.showInfo);
   }
 
   async getDetailMovie(id: string) {
     let response = await fetch(this.apisServices.getMovieDetail(id));
     this.movieDetail = await response.json();
-    console.log(this.movieDetail);
   }
 }

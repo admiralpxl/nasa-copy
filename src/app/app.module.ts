@@ -12,7 +12,6 @@ import { NasaSearchComponent } from './components/nasa-search/nasa-search.compon
 import { NasaCardComponent } from './components/nasa-card/nasa-card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NasaComponent } from './pages/nasa/nasa.component';
-import { MoviePageComponent } from './components/movie-page/movie-page.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +25,9 @@ import { MoviePageComponent } from './components/movie-page/movie-page.component
     NasaCardComponent,
     HomeComponent,
     NasaComponent,
-    MoviePageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
