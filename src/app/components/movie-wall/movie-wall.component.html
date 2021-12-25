@@ -1,19 +1,12 @@
 <section class="movie-wall padding">
   <h2>Nasa Movies</h2>
   <section class="movie-wall-list flex-gap-one">
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
+    <app-movie-card
+      [list]="list"
+      *ngFor="let list of listMovie"
+    ></app-movie-card>
   </section>
   <article class="movie-wall-page flex-center">
-    <app-movie-page></app-movie-page>
-    <app-movie-page></app-movie-page>
-    <app-movie-page></app-movie-page>
-    <app-movie-page></app-movie-page>
-    <app-movie-page></app-movie-page>
     <app-movie-page></app-movie-page>
   </article>
 </section>

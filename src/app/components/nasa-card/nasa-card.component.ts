@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Apod } from '../../models/nasaApod.model';
+import { ApisService } from '../../services/apis.service';
 
 @Component({
   selector: 'app-nasa-card',
@@ -8,8 +9,6 @@ import { Apod } from '../../models/nasaApod.model';
   styleUrls: ['./nasa-card.component.css'],
 })
 export class NasaCardComponent implements OnInit {
-  constructor() {}
-
   nasaApodInfo: Apod = {
     copyright: '',
     date: '',
@@ -20,17 +19,18 @@ export class NasaCardComponent implements OnInit {
     title: '',
     url: '',
   };
-  nasaApiKey: string = 'SPkLKA7bCBamNIY9kJ4ceIeWB67uFjxP5lXkQeNR';
+  nasaUrl: string = '';
 
-  ngOnInit(): void {
-    this.nasaGetInfo();
+  constructor(private apisServise: ApisService) {
+    this.nasaUrl = this.apisServise.getNasaApodInfo();
   }
 
-  async nasaGetInfo() {
-    let response = await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${this.nasaApiKey}`
-    );
+  ngOnInit(): void {
+    this.getNasaInfo();
+  }
+
+  async getNasaInfo() {
+    let response = await fetch(this.nasaUrl);
     this.nasaApodInfo = await response.json();
-    console.log(this.nasaApodInfo);
   }
 }
